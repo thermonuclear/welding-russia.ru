@@ -1,0 +1,221 @@
+.wrap {
+    border: 1px solid silver;
+    width: 1160px;
+    margin: 0 auto;
+}
+.plank {
+    height: 20px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+}
+.menu {
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.view {
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+}
+.menu__zero {
+    cursor: initial;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    width: 160px;
+    border: 1px solid #000;
+    padding: 0 20px 10px;
+    display: none;
+}
+.menu__zero > li {
+    position: relative;
+}
+.menu__first li {
+    position: relative;
+    padding: 2px;
+}
+.menu__second {
+    cursor: initial;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    width: 220px;
+    border: 1px solid #000;
+    left: 140px;
+    padding: 0 0 20px 20px;
+    display: none;
+    top: 4px;
+}
+.view {
+
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content: space-between;
+    padding: 0 20px 20px;
+}
+.product {
+    margin-top: 20px;
+    width: 260px;
+    height: 420px;
+    border: 1px solid silver;
+    background: #fff;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.product:hover {
+    border: 1px solid #28a745;
+}
+.product__img {
+    text-align: center;
+}
+.product__title {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 36px;
+    padding: 14px 0;
+    color: cadetblue;
+}
+.product__title-change-btn {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    text-transform: none;
+    padding: 8px;
+    min-width: 90px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    right: 0;
+    bottom: -34px;
+    display: none;
+}
+.product__desc {
+    height: 60px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    padding: 4px 0;
+    overflow: hidden;
+}
+.product__price {
+    font-weight: bold;
+    font-size: 31px;
+    color: #85160d;
+    text-align: center;
+}
+.product__price .ruble {
+    font-size: 31px;
+    color: #85160d;
+}
+.product__buy {
+    display: block;
+    background: #fff;
+    color: #333;
+    border: 1px solid #d9d9d9;
+    font-weight: normal;
+    margin: 14px auto 0;
+    padding: 10px 0;
+    width: 80%;
+    font-size: 16px;
+    cursor: pointer;
+}
+.product__buy:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+@font-face{
+    font-family: "RUB";
+    src: url('/font/font-rubl.woff');
+    font-weight: normal;
+    format('woff');
+}
+.ruble {
+    font-family: 'RUB';
+    font-size: 36px;
+    color: black;
+}
+.table__caption {
+    display: none;
+}
+.products_table {
+    display: table;
+    width: calc(100% - 40px);
+}
+.products_table .table__caption {
+    display: table-row;
+    font-weight: bold;
+}
+.products_table .product {
+    display: table-row;
+    height: auto;
+    width: 100%;
+}
+.products_table .product > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+    border-bottom: 1px solid silver;
+}
+.products_table .product .product__img {
+    width: 50px;
+}
+
+.products_table .product__buy {
+    display: initial;
+    width: initial;
+    margin: 0;
+    padding: 4px;
+}
+
+@media screen and (max-width: 1180px) {
+    .wrap {
+        width: 960px;
+    }
+    .products_table .product__buy {
+        padding: 2px;
+    }
+    .products_table .product__price {
+        font-size: 16px;
+        color: #85160d;
+        text-align: center;
+        min-width: 60px;
+    }
+    .products_table .ruble {
+        display: none;
+    }
+}
+@media screen and (max-width: 980px) {
+    .wrap {
+        width: 720px;
+    }
+    .products_table .product__buy {
+        padding: 1px;
+    }
+}
+@media screen and (max-width: 740px) {
+    .wrap {
+        width: 320px;
+    }
+    .wrap_table {
+        width: 400px;
+    }
+    .products_table .product__title {
+        text-transform: uppercase;
+        font-size: 10px;
+        color: cadetblue;
+    }
+    .products_table .product__desc {
+        font-size: 10px;
+        overflow: hidden;
+    }
+}
